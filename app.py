@@ -14,13 +14,13 @@ def My_Profile():
     github_repo = 'https://github.com/alex-waiganjo/HNG'
     github_file ='https://github.com/alex-waiganjo/HNG/blob/main/app.py'
     details = {
-        "Slack_name": slack_name,
-        "Current_day": date.strftime('%A'),
-        "Utc_time": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
-        "Track": track,
-        "Github_file_url": github_file,
-        "Github_repo_url": github_repo,
-        "Status_code": 200
+        "slack_name": slack_name,
+        "current_day": date.strftime('%A'),
+        "utc_time": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "track": track,
+        "github_file_url": github_file,
+        "github_repo_url": github_repo,
+        "status_code": 200
     }
     output =jsonify(details)
     output.headers['Content-Type']='application/json'
