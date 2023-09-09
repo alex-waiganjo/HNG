@@ -12,12 +12,13 @@ def My_Profile():
     track = request.args.get('track')
     date = datetime.datetime.now()
     github_repo = 'https://github.com/alex-waiganjo/HNG'
+    github_file ='https://github.com/alex-waiganjo/HNG/blob/main/app.py'
     details = {
         "Slack_name": slack_name,
         "Current_day": date.strftime('%A'),
-        "Utc_time": date.isoformat(),
+        "Utc_time": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         "Track": track,
-        "Github_file_url": github_repo,
+        "Github_file_url": github_file,
         "Github_repo_url": github_repo,
         "Status_code": 200
     }
