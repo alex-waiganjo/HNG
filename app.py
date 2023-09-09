@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
 # Stage 2 Task {Host an API with your HNG Details }
-@app.route("api/<slack_name>/<track>")
+@app.route("/api/<slack_name>/<track>")
 def My_Profile(slack_name, track):
     date = datetime.datetime.now()
     github_repo = 'https://github.com/alex-waiganjo/HNG'
