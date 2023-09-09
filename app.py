@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, jsonify, request
 import datetime
 
 app = Flask(__name__)
@@ -22,7 +22,9 @@ def My_Profile():
         "Github_repo_url": github_repo,
         "Status_code": 200
     }
-    return details
+    output =jsonify(details)
+    output.headers['Content-Type']='application/json'
+    return output
 
 
 if __name__ == '__main__':
